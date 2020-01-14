@@ -1,100 +1,51 @@
 <template name="basics">
 	<view>
 		<scroll-view scroll-y class="page">
-			<image src="https://cdn.nlark.com/yuque/0/2019/png/280374/1552996358228-assets/web-upload/e256b4ce-d9a4-488b-8da2-032747213982.png"
-			 mode="widthFix" class="response"></image>
+			 <view class="banner">
+			 	<text class="fgfont fg-yu"></text>
+				<text class="text">一条有梦想的咸鱼</text>
+			 </view>
 			<view class="nav-list">
-				<navigator hover-class="none" :url="'/pages/basics/' + item.name" class="nav-li" navigateTo :class="'bg-'+item.color"
-				 :style="[{animation: 'show ' + ((index+1)*0.2+1) + 's 1'}]" v-for="(item,index) in elements" :key="index">
+				<navigator hover-class="none" :url="'/pages/basics/detail?id=' + item.id" class="nav-li" navigateTo :class="'bg-'+item.color"
+				 :style="[{animation: 'show ' + ((index+1)*0.2+1) + 's 1'}]" v-for="(item,index) in elements" :key="index" @click.native="setDetail(item)">
 					<view class="nav-title">{{item.title}}</view>
-					<view class="nav-name">{{item.name}}</view>
-					<text :class="'cuIcon-' + item.cuIcon"></text>
+					<view class="nav-content">{{item.content}}</view>
 				</navigator>
 			</view>
-			<view class="cu-card">
-				<view class="cu-item bg-img shadow-blur" :style="[{backgroundImage:'url('+item.img+')'}]" @tap="toChild" :data-url="item.url"
-				 v-for="(item,index) in list" :key="index">
-					<view class="cardTitle">
-						{{item.title}}
-					</view>  
-				</view>
-			</view>
-			<view class="cu-tabbar-height"></view>
 		</scroll-view>
 	</view>
 </template>
 
 <script>
+	import api from '@/common/api'
+	import {mapState,mapMutations} from 'vuex'
 	export default {
 		name: "basics",
 		data() {
 			return {
 				elements: [
-					// {
-					// 	title: '布局',
-					// 	name: 'layout',
-					// 	color: 'cyan',
-					// 	cuIcon: 'newsfill'
-					// },
-					// {
-					// 	title: '背景',
-					// 	name: 'background',
-					// 	color: 'blue',
-					// 	cuIcon: 'colorlens'
-					// },
-					// {
-					// 	title: '文本',
-					// 	name: 'text',
-					// 	color: 'purple',
-					// 	cuIcon: 'font'
-					// },
-					// {
-					// 	title: '图标 ',
-					// 	name: 'icon',
-					// 	color: 'mauve',
-					// 	cuIcon: 'cuIcon'
-					// },
-					// {
-					// 	title: '按钮',
-					// 	name: 'button',
-					// 	color: 'pink',
-					// 	cuIcon: 'btn'
-					// },
-					// {
-					// 	title: '标签',
-					// 	name: 'tag',
-					// 	color: 'brown',
-					// 	cuIcon: 'tagfill'
-					// },
-					// {
-					// 	title: '头像',
-					// 	name: 'avatar',
-					// 	color: 'red',
-					// 	cuIcon: 'myfill'
-					// },
-					// {
-					// 	title: '进度条',
-					// 	name: 'progress',
-					// 	color: 'orange',
-					// 	cuIcon: 'icloading'
-					// },
-					// {
-					// 	title: '边框阴影',
-					// 	name: 'shadow',
-					// 	color: 'olive',
-					// 	cuIcon: 'copy'
-					// },
-					// {
-					// 	title: '加载',
-					// 	name: 'loading',
-					// 	color: 'green',
-					// 	cuIcon: 'loading2'
-					// }
 				],
 			};
 		},
 		onShow() {
 			console.log("success")
+		},
+		onLoad(){
+			
+		},
+		created(){
+			api.articleList().then(res=>{
+				this.elements = res.data.result
+			}).catch(res=>{
+			
+			})
+		},
+		methods:{
+			...mapMutations(['UPDATADETAL']),
+			setDetail(item){
+				console.log(item)
+			  this.UPDATADETAL(item)
+			}
 		}
 	}
 </script>

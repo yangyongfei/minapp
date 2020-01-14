@@ -4,7 +4,7 @@
 			<cu-custom bgImage="https://image.weilanwl.com/color2.0/plugin/cjkz2329.jpg">
 				<block slot="content">
 					关于我
-					<!-- <image src="/static/cjkz.png" mode="aspectFill" style="width: 240upx;height: 60upx;"></image> -->
+					<image src="/static/cjkz.png" mode="aspectFill" style="width: 240upx;height: 60upx;"></image>
 				</block>
 			</cu-custom>
 			<view class="cu-card">

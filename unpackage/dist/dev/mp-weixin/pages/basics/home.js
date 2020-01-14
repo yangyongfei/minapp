@@ -105,104 +105,54 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-var _default =
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var _api = _interopRequireDefault(__webpack_require__(/*! @/common/api */ 257));
+var _vuex = __webpack_require__(/*! vuex */ 299);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _objectSpread(target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i] != null ? arguments[i] : {};var ownKeys = Object.keys(source);if (typeof Object.getOwnPropertySymbols === 'function') {ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) {return Object.getOwnPropertyDescriptor(source, sym).enumerable;}));}ownKeys.forEach(function (key) {_defineProperty(target, key, source[key]);});}return target;}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}var _default =
 {
   name: "basics",
   data: function data() {
     return {
-      elements: [
-        // {
-        // 	title: '布局',
-        // 	name: 'layout',
-        // 	color: 'cyan',
-        // 	cuIcon: 'newsfill'
-        // },
-        // {
-        // 	title: '背景',
-        // 	name: 'background',
-        // 	color: 'blue',
-        // 	cuIcon: 'colorlens'
-        // },
-        // {
-        // 	title: '文本',
-        // 	name: 'text',
-        // 	color: 'purple',
-        // 	cuIcon: 'font'
-        // },
-        // {
-        // 	title: '图标 ',
-        // 	name: 'icon',
-        // 	color: 'mauve',
-        // 	cuIcon: 'cuIcon'
-        // },
-        // {
-        // 	title: '按钮',
-        // 	name: 'button',
-        // 	color: 'pink',
-        // 	cuIcon: 'btn'
-        // },
-        // {
-        // 	title: '标签',
-        // 	name: 'tag',
-        // 	color: 'brown',
-        // 	cuIcon: 'tagfill'
-        // },
-        // {
-        // 	title: '头像',
-        // 	name: 'avatar',
-        // 	color: 'red',
-        // 	cuIcon: 'myfill'
-        // },
-        // {
-        // 	title: '进度条',
-        // 	name: 'progress',
-        // 	color: 'orange',
-        // 	cuIcon: 'icloading'
-        // },
-        // {
-        // 	title: '边框阴影',
-        // 	name: 'shadow',
-        // 	color: 'olive',
-        // 	cuIcon: 'copy'
-        // },
-        // {
-        // 	title: '加载',
-        // 	name: 'loading',
-        // 	color: 'green',
-        // 	cuIcon: 'loading2'
-        // }
-      ] };
+      elements: [] };
+
 
   },
   onShow: function onShow() {
     console.log("success");
-  } };exports.default = _default;
+  },
+  onLoad: function onLoad() {
+
+  },
+  created: function created() {var _this = this;
+    _api.default.articleList().then(function (res) {
+      _this.elements = res.data.result;
+    }).catch(function (res) {
+
+    });
+  },
+  methods: _objectSpread({},
+  (0, _vuex.mapMutations)(['UPDATADETAL']), {
+    setDetail: function setDetail(item) {
+      console.log(item);
+      this.UPDATADETAL(item);
+    } }) };exports.default = _default;
 
 /***/ }),
 

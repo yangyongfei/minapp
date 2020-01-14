@@ -118,22 +118,32 @@
 <style>
 	@import "colorui/main.css";
 	@import "colorui/icon.css";
-
+	@import "colorui/fgicon.css";
+    .banner{
+    	width: 750upx;
+    	height: 400upx;
+    	background-color: #f6003c;
+    	display: flex;
+    	justify-content: center;
+    	align-items: center;
+    	color: #fff;
+    }
+    .banner .fg-yu{
+    	font-size: 76upx;
+    	margin-right: 20upx;
+    }
 	.nav-list {
-		display: flex;
+		/* display: flex;
 		flex-wrap: wrap;
 		padding: 0px 40upx 0px;
-		justify-content: space-between;
+		justify-content: space-between; */
 	}
 
 	.nav-li {
 		padding: 30upx;
 		border-radius: 12upx;
-		width: 45%;
-		margin: 0 2.5% 40upx;
-		background-image: url(https://cdn.nlark.com/yuque/0/2019/png/280374/1552996358352-assets/web-upload/cc3b1807-c684-4b83-8f80-80e5b8a6b975.png);
-		background-size: cover;
-		background-position: center;
+		width: 710upx;
+		margin: 20upx;
 		position: relative;
 		z-index: 1;
 	}
@@ -160,14 +170,31 @@
 
 	.nav-title {
 		font-size: 32upx;
-		font-weight: 300;
+		font-weight: 400;
+		/* color: #666; */
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		overflow: hidden;
+		word-break: break-all;
 	}
 
-	.nav-title::first-letter {
+/* 	.nav-title::first-letter {
 		font-size: 40upx;
 		margin-right: 4upx;
+	} */
+    .nav-content{
+	  font-size: 28upx;
+	  text-transform: Capitalize;
+	  margin-top: 10upx;
+	  color: #999;
+	  text-overflow: -o-ellipsis-lastline;
+	  overflow: hidden;
+	  text-overflow: ellipsis;
+	  display: -webkit-box;
+	  -webkit-line-clamp: 2;
+	  line-clamp: 2;
+	  -webkit-box-orient: vertical;
 	}
-
 	.nav-name {
 		font-size: 28upx;
 		text-transform: Capitalize;
@@ -199,11 +226,11 @@
 		opacity: 0.3;
 	}
 
-	.nav-name::first-letter {
+/* 	.nav-name::first-letter {
 		font-weight: bold;
 		font-size: 36upx;
 		margin-right: 1px;
-	}
+	} */
 
 	.nav-li text {
 		position: absolute;

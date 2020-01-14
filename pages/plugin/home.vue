@@ -1,21 +1,36 @@
 <template name="components">
 	<view>
 		<scroll-view scroll-y class="page">
-			<cu-custom bgImage="https://image.weilanwl.com/color2.0/plugin/cjkz2329.jpg">
-				<block slot="content">
-					关于我
-					<!-- <image src="/static/cjkz.png" mode="aspectFill" style="width: 240upx;height: 60upx;"></image> -->
-				</block>
-			</cu-custom>
-			<view class="cu-card">
-				<view class="cu-item bg-img shadow-blur" :style="[{backgroundImage:'url('+item.img+')'}]" @tap="toChild" :data-url="item.url"
-				 v-for="(item,index) in list" :key="index">
-					<view class="cardTitle">
-						{{item.title}}
-					</view>
+			<view class="about-bg"></view>
+			<view class="about-text text-white">
+				君不见黄河之水天上来
+				奔流到海不复回
+				君不见 高堂明镜悲白发
+				朝如青丝暮成雪
+				人生得意须尽欢
+				莫使金樽空对月
+				天生我才必有用
+				千金散尽还复来
+				烹羊宰牛且为乐
+				会须一饮三百杯
+				岑夫子，丹丘生
+				将进酒，杯莫停
+				与君歌一曲
+				请君为我倾耳听
+				钟鼓馔玉不足贵
+				但愿长醉不复醒
+				古来圣贤皆寂寞 
+				惟有饮者留其名
+				陈王昔时宴平乐
+				斗酒十千恣欢谑
+				主人何为言少钱
+				径须沽取对君酌
+				五花马
+				千金裘
+				呼儿将出换美酒
+				与尔同销万古愁
 				</view>
-			</view>
-			<view class="cu-tabbar-height"></view>
+			<!-- <view class="cu-tabbar-height"></view> -->
 		</scroll-view>
 	</view>
 </template>
@@ -27,26 +42,7 @@
 			return {
 				StatusBar: this.StatusBar,
 				CustomBar: this.CustomBar,
-				list: [{
-						title: '索引列表',
-						img: 'https://image.weilanwl.com/color2.0/plugin/sylb2244.jpg',
-						url: '../plugin/indexes'
-					},
-					{
-						title: '微动画',
-						img: 'https://image.weilanwl.com/color2.0/plugin/wdh2236.jpg',
-						url: '../plugin/animation'
-					},
-					{
-						title: '全屏抽屉',
-						img: 'https://image.weilanwl.com/color2.0/plugin/qpct2148.jpg',
-						url: '../plugin/drawer'
-					},
-					{
-						title: '垂直导航',
-						img: 'https://image.weilanwl.com/color2.0/plugin/qpczdh2307.jpg',
-						url: '../plugin/verticalnav'
-					}
+				list: [
 				]
 			};
 		},
@@ -63,8 +59,27 @@
 <style>
 	.page {
 		height: 100vh;
+		display: flex;
+		align-items: center;
 	}
-
+    .about-text{
+		font-size:32upx;
+		margin: 400upx auto 0 auto;
+		text-align: center;
+		background-color: rgba(255,255,255,.4);
+		width: 90%;
+		padding: 40upx;
+	}
+	.about-bg{
+		position: fixed;
+		background: url(../../static/libai.jpeg);
+		background-size: cover;
+		filter: blur(30upx);
+		top: 0;
+		width: 100%;
+		height: 100vh;
+		z-index: -1;
+	}
 	.cardTitle {
 		color: #fff;
 		padding: 90upx 60upx;

@@ -15,7 +15,7 @@ module.exports = {
 					nameMap[nameList[0]] = this.data[nameList[0]]
 
 				} else {
-
+ 
 					nameMap[nameList[0]] = {}
 
 				}

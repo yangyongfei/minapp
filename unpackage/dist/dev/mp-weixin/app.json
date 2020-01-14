@@ -4,6 +4,7 @@
     "pages/basics/layout",
     "pages/basics/background",
     "pages/basics/text",
+    "pages/basics/detail",
     "pages/basics/icon",
     "pages/basics/button",
     "pages/basics/design",
@@ -31,8 +32,8 @@
   ],
   "subPackages": [],
   "window": {
-    "navigationBarBackgroundColor": "#0081ff",
-    "navigationBarTitleText": "ColorUi for UniApp",
+    "navigationBarBackgroundColor": "#f6003c",
+    "navigationBarTitleText": "",
     "navigationStyle": "custom",
     "navigationBarTextStyle": "white"
   },

@@ -18,6 +18,10 @@
 			"style": {}
 		},
 		{
+			"path": "pages/basics/detail",
+			"style": {}
+		},
+		{
 			"path": "pages/basics/icon",
 			"style": {}
 		},
@@ -116,8 +120,8 @@
 			"transparentTitle": "always",
 			"allowsBounceVertical": "NO"
 		},
-		"navigationBarBackgroundColor": "#0081ff",
-		"navigationBarTitleText": "ColorUi for UniApp",
+		"navigationBarBackgroundColor": "#f6003c",
+		"navigationBarTitleText": "",
 		"navigationStyle": "custom",
 		"navigationBarTextStyle": "white"
 	},

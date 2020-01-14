@@ -122,6 +122,9 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 //
 //
 //
+//
+//
+//
 var _default =
 {
   data: function data() {
@@ -151,35 +154,35 @@ var _default =
       // 		color: 'brown',
       // 		cuIcon: 'newsfill'
       // 	},
-      // 	{
-      // 		title: '表单',
-      // 		name: 'form',
-      // 		color: 'red',
-
-      //     },
       {
-        title: '飞信',
+        title: '音乐播放器',
+        name: 'form',
+        color: 'red' },
+
+
+      {
+        title: '阿飞聊天室',
         name: 'chat',
         color: 'green',
-        cuIcon: 'messagefill' }] };
+        cuIcon: 'messagefill' },
 
+      {
+        title: '仿腾讯天气',
+        name: 'swiper',
+        color: 'olive',
+        cuIcon: 'album' },
 
+      {
+        title: '拼图游戏',
+        name: 'modal',
+        color: 'grey',
+        cuIcon: 'squarecheckfill' },
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+      {
+        title: '愤怒的小鸟',
+        name: 'steps',
+        color: 'cyan',
+        cuIcon: 'roundcheckfill' }] };
 
 
 
